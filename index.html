@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator Kurikulum Merdeka - SMA/MA</title>
+    <title>Generator Kurikulum Merdeka SMA - CP, TP, & ATP</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+    <div id="root"></div>
+
+    <!-- React and ReactDOM Production CDNs -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel standalone for runtime JSX translation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-<body class="bg-slate-50 font-sans text-slate-800 min-h-screen">
-
-    <div id="root"></div>
 
     <script type="text/babel">
         const { useState } = React;
 
-        // --- DATA KURIKULUM MERDEKA SMA ---
         const kurikulumData = {
           'Fase E (Kelas X)': {
             'Bahasa Indonesia': [
@@ -24,7 +35,7 @@
                 elemen: 'Menyimak',
                 cp: 'Peserta didik mampu mengevaluasi dan mengkreasi informasi berupa gagasan, pikiran, perasaan, pandangan, arahan atau pesan yang akurat dari menyimak berbagai jenis teks (nonfiksi dan fiksi) dalam bentuk monolog, dialog, dan gelar wicara. Peserta didik mampu mengapresiasi dan menanggapi berbagai bentuk karya sastra yang disimak.',
                 tp: [
-                  'Mengevaluasi informasi dari teks monolog atau dialog yang disimak.',
+                  'Mengevaluasi informasi dari teks monolog atau dialog yang disimak secara kritis.',
                   'Mengkreasi gagasan berdasarkan pesan dari gelar wicara yang disimak.',
                   'Memberikan tanggapan kritis terhadap karya sastra yang dibacakan.'
                 ]
@@ -46,7 +57,7 @@
                 tp: [
                   'Menggeneralisasi sifat-sifat operasi bilangan berpangkat dan logaritma.',
                   'Menyelesaikan permasalahan kontekstual menggunakan barisan aritmetika dan geometri.',
-                  'Menghitung bunga tunggal dan majemuk dalam konteks literasi finansial.'
+                  'Menghitung bunga tunggal dan majemuk dalam konteks finansial sederhana.'
                 ]
               },
               {
@@ -293,7 +304,7 @@
                 elemen: 'Keterampilan Gerak Lanjutan',
                 cp: 'Pada akhir Fase F, peserta didik dapat merancang dan mempraktikkan hasil rancangan evaluasi penerapan keterampilan gerak lanjutan dalam berbagai permainan dan olahraga, aktivitas senam, aktivitas gerak berirama, dan aktivitas permainan dan olahraga air (kondisional) dengan taktik dan strategi secara matang dalam situasi kompetitif.',
                 tp: [
-                  'Merancang pola penyerangan dan pertahanan yang kompleks pada olahraga beregu (contoh: sistem formasi sepak bola/voli).',
+                  'Merancang pola penyerangan dan pertahanan yang kompleks pada olahraga beregu.',
                   'Mempraktikkan teknik lanjutan dalam cabang olahraga atletik (misal: estafet atau lompat jauh).',
                   'Menyusun koreografi senam ritmik kelompok secara kolaboratif.'
                 ]
@@ -304,7 +315,7 @@
                 tp: [
                   'Mengukur dan menghitung indeks massa tubuh (IMT) serta kebutuhan kalori harian.',
                   'Merancang program latihan fisik mingguan (circuit training) sesuai dengan tujuan kebugaran pribadi.',
-                  'Mengevaluasi peningkatan denyut nadi latihan setelah menjalankan program kebugaran selama satu bulan.'
+                  'Mengevaluasi peningkatan denyut nadi latihan setelah menjalankan program kebugaran.'
                 ]
               }
             ],
@@ -315,16 +326,16 @@
                 tp: [
                   'Menganalisis struktur teks dan ciri kebahasaan pada teks analytical exposition.',
                   'Membedakan argumen pro dan kontra dalam teks berbentuk discussion text.',
-                  'Menyimplukan pesan moral atau implikasi dari karya sastra berbahasa Inggris.'
+                  'Menyimpulkan pesan moral atau implikasi dari karya sastra berbahasa Inggris.'
                 ]
               },
               {
                 elemen: 'Menulis - Mempresentasikan',
                 cp: 'Pada akhir Fase F, peserta didik mampu menyusun teks lisan dan tulis yang panjang, kompleks, dan kohesif dengan struktur yang tepat dan kosa kata akademis. Mereka mampu mengemukakan argumen, gagasan, dan mempertahankan pendapat dalam sebuah diskusi atau debat. Peserta didik menyajikan proyek komprehensif atau makalah singkat menggunakan ragam bahasa formal.',
                 tp: [
-                  'Menulis esai argumentatif (hortatory/analytical exposition) dengan struktur tesis, argumen, dan kesimpulan yang padu.',
-                  'Menyampaikan pidato atau presentasi persuasif dalam bahasa Inggris secara fasih dan percaya diri.',
-                  'Menerapkan penggunaan kalimat pasif (passive voice) dan kata hubung (connectives) secara tepat dalam penulisan akademis.'
+                  'Menulis esai argumentatif (hortatory/analytical exposition) dengan struktur tesis, argumen, dan kesimpulan.',
+                  'Menyampaikan pidato atau presentasi persuasif dalam bahasa Inggris secara fasih.',
+                  'Menerapkan penggunaan kalimat pasif (passive voice) dan kata hubung secara tepat.'
                 ]
               }
             ],
@@ -336,16 +347,16 @@
                   'Menganalisis perubahan entalpi (ΔH) suatu reaksi berdasarkan data kalorimeter atau hukum Hess.',
                   'Menjelaskan faktor-faktor yang mempengaruhi laju reaksi kimia berdasarkan teori tumbukan.',
                   'Menghitung pH larutan penyangga (buffer) dan hidrolisis garam.',
-                  'Menyetarakan persamaan reaksi redoks dan menerapkannya dalam prinsip sel Volta (baterai).'
+                  'Menyetarakan persamaan reaksi redoks dan menerapkannya dalam prinsip sel Volta.'
                 ]
               },
               {
                 elemen: 'Keterampilan Proses',
-                cp: 'Peserta didik mampu merencanakan dan melakukan penyelidikan laboratorium, menggunakan alat ukur yang tepat, memproses dan menganalisis data eksperimen, serta menyimpulkan dan menyajikan laporan hasil praktikum kimia sesuai kaidah ilmiah.',
+                cp: 'Peserta didik mampu merencanakan dan melakukan penyelidikan laboratorium, menggunakan alat ukur yang tepat, memproses dan menganalisis data eksperimen, serta menyimplukan dan menyajikan laporan hasil praktikum kimia sesuai kaidah ilmiah.',
                 tp: [
                   'Merancang prosedur titrasi asam-basa untuk menentukan konsentrasi larutan yang tidak diketahui.',
-                  'Melakukan praktikum uji sifat asam-basa menggunakan indikator alami dan universal.',
-                  'Mengolah data hasil percobaan laju reaksi ke dalam bentuk grafik linear untuk menentukan orde reaksi.'
+                  'Melakukan praktikum uji sifat asam-basa menggunakan indikator alami.',
+                  'Mengolah data hasil percobaan laju reaksi ke dalam bentuk grafik linear.'
                 ]
               }
             ],
@@ -354,17 +365,17 @@
                 elemen: 'Pemahaman Fisika',
                 cp: 'Pada akhir Fase F, peserta didik mampu memahami konsep kinematika dan dinamika partikel benda tegar; menganalisis fluida statis dan dinamis; mengaplikasikan konsep termodinamika; menganalisis gejala gelombang mekanik dan elektromagnetik; memahami listrik statis, dinamis, dan kemagnetan; serta mendeskripsikan fenomena fisika modern, teori relativitas khusus, dan fisika kuantum dalam aplikasi teknologi.',
                 tp: [
-                  'Menerapkan hukum kekekalan energi mekanik and momentum dalam menyelesaikan masalah tumbukan.',
+                  'Menerapkan hukum kekekalan energi mekanik dan momentum dalam menyelesaikan masalah tumbukan.',
                   'Menganalisis gaya angkat pesawat terbang berdasarkan prinsip Bernoulli pada fluida dinamis.',
                   'Menjelaskan karakteristik gelombang berjalan dan gelombang stasioner.',
-                  'Menghitung kuat arus dan tegangan pada rangkaian listrik arus searah (DC) dan bolak-balik (AC).'
+                  'Menghitung kuat arus dan tegangan pada rangkaian listrik searah (DC) dan bolak-balik (AC).'
                 ]
               },
               {
                 elemen: 'Keterampilan Proses',
                 cp: 'Peserta didik merencanakan dan melakukan percobaan fisika, menggunakan teknologi dan instrumen ukur yang akurat, menganalisis data grafis, mengevaluasi kesalahan pengukuran, dan mengomunikasikan hasil riset sederhana.',
                 tp: [
-                  'Melakukan praktikum gerak harmonik sederhana pada ayunan matematis untuk menentukan percepatan gravitasi.',
+                  'Melakukan praktikum gerak harmonik sederhana pada ayunan matematis untuk menentukan gravitasi.',
                   'Menganalisis ketidakpastian (error) berulang pada pengukuran data eksperimen.',
                   'Menyusun makalah ilmiah terkait pemanfaatan teknologi elektromagnetik di era modern.'
                 ]
@@ -373,10 +384,10 @@
             'Sejarah': [
               {
                 elemen: 'Pemahaman Sejarah',
-                cp: 'Pada akhir Fase F, peserta didik mampu menganalisis peristiwa sejarah secara diakronis dan sinkronis. Peserta didik memahami sejarah Indonesia sejak masa pergerakan nasional, masa pendudukan Jepang, proklamasi kemederkaan, perjuangan mempertahankan kemerdekaan, masa Demokrasi Liberal dan Terpimpin, masa Orde Baru, hingga masa Reformasi, serta keterkaitannya dengan dinamika regional dan global.',
+                cp: 'Pada akhir Fase F, peserta didik mampu menganalisis peristiwa sejarah secara diakronis dan sinkronis. Peserta didik memahami sejarah Indonesia sejak masa pergerakan nasional, masa pendudukan Jepang, proklamasi kemerdekaan, perjuangan mempertahankan kemerdekaan, masa Demokrasi Liberal dan Terpimpin, masa Orde Baru, hingga masa Reformasi, serta keterkaitannya dengan dinamika regional dan global.',
                 tp: [
-                  'Menganalisis dampak pendudukan Jepang terhadap transformasi sosial dan politik masyarakat Indonesia.',
-                  'Menjelaskan peristiwa detik-detik Proklamasi Kemerdekaan dan maknanya bagi bangsa Indonesia.',
+                  'Menganalisis dampak pendudukan Jepang terhadap transformasi sosial dan politik.',
+                  'Menjelaskan peristiwa detik-detik Proklamasi Kemerdekaan dan maknanya bagi bangsa.',
                   'Mengevaluasi dinamika politik dan ekonomi pada masa Demokrasi Terpimpin.',
                   'Menganalisis faktor-faktor penyebab runtuhnya Orde Baru dan lahirnya era Reformasi.'
                 ]
@@ -387,10 +398,10 @@
                 elemen: 'Keterampilan Proses Sejarah',
                 cp: 'Pada akhir Fase F Sejarah Tingkat Lanjut, peserta didik mampu melakukan penelitian sejarah lokal, nasional, maupun global secara mandiri. Peserta didik mampu menerapkan heuristik (pengumpulan sumber), kritik sumber, interpretasi sejarah, dan menulis historiografi. Peserta didik mengkaji peristiwa sejarah dunia yang berpengaruh terhadap Indonesia (seperti Perang Dunia I & II, Perang Dingin, dan Revolusi besar dunia).',
                 tp: [
-                  'Mengidentifikasi dan memverifikasi keaslian sumber primer dan sekunder dalam riset sejarah.',
-                  'Menyusun tulisan sejarah lokal berdasarkan metodologi penelitian sejarah yang sistematis.',
+                  'Mengidentifikasi and memverifikasi keaslian sumber primer dan sekunder dalam riset sejarah.',
+                  'Menyusun tulisan sejarah lokal berdasarkan metodologi penelitian sejarah.',
                   'Menganalisis dampak Perang Dingin terhadap perpolitikan dunia dan Indonesia.',
-                  'Mengevaluasi pengaruh revolusi industri dan revolusi Prancis terhadap kemunculan paham demokrasi.'
+                  'Mengevaluasi pengaruh revolusi industri terhadap kemunculan paham demokrasi.'
                 ]
               }
             ],
@@ -401,15 +412,15 @@
                 tp: [
                   'Menentukan hasil bagi dan sisa pada pembagian polinomial menggunakan teorema sisa.',
                   'Melakukan operasi penjumlahan, pengurangan, dan perkalian pada matriks.',
-                  'Menyelesaikan Sistem Persamaan Linear Tiga Variabel (SPLTV) menggunakan determinan matriks (aturan Cramer).'
+                  'Menyelesaikan Sistem Persamaan Linear Tiga Variabel menggunakan determinan matriks.'
                 ]
               },
               {
                 elemen: 'Analisis Data dan Peluang',
                 cp: 'Pada akhir Fase F, peserta didik dapat menentukan dan menganalisis ukuran pemusatan dan penyebaran data yang disajikan dalam bentuk tabel distribusi frekuensi dan histogram. Peserta didik dapat menentukan ruang sampel, peluang kejadian majemuk, peluang kejadian saling lepas, saling bebas, dan bersyarat.',
                 tp: [
-                  'Menghitung nilai rata-rata (mean), median, dan modus dari data berkelompok pada tabel distribusi frekuensi.',
-                  'Menganalisis penyimpangan data dengan menghitung ragam (varians) dan simpangan baku (standar deviasi).',
+                  'Menghitung nilai rata-rata, median, dan modus dari data berkelompok.',
+                  'Menganalisis penyimpangan data dengan menghitung ragam dan simpangan baku.',
                   'Menyelesaikan masalah yang berkaitan dengan peluang kejadian saling bebas dan bersyarat.'
                 ]
               }
@@ -421,7 +432,7 @@
                 tp: [
                   'Menghitung nilai limit fungsi trigonometri untuk mendekati sudut tertentu.',
                   'Menerapkan aturan rantai untuk mencari turunan dari fungsi komposisi aljabar.',
-                  'Menganalisis grafik fungsi menggunakan turunan pertama untuk mencari interval fungsi naik/turun dan titik ekstrem.',
+                  'Menganalisis grafik fungsi menggunakan turunan pertama untuk mencari interval fungsi naik/turun.',
                   'Menyelesaikan integral tentu untuk menghitung luas daerah di bawah kurva.'
                 ]
               },
@@ -430,7 +441,7 @@
                 cp: 'Pada akhir Fase F Matematika Tingkat Lanjut, peserta didik mampu menganalisis persamaan irisan kerucut (lingkaran, elips, parabola, dan hiperbola) dengan pusat (0,0) dan (a,b), serta menentukan persamaan garis singgung pada irisan kerucut tersebut.',
                 tp: [
                   'Menyusun persamaan lingkaran jika diketahui titik pusat dan jari-jarinya.',
-                  'Menganalisis unsur-unsur elips (titik fokus, puncak, dan panjang sumbu) dari persamaan umumnya.',
+                  'Menganalisis unsur-unsur elips dari persamaan umumnya.',
                   'Menentukan persamaan garis singgung pada parabola yang melalui suatu titik.'
                 ]
               }
@@ -441,18 +452,17 @@
                 cp: 'Pada akhir Fase F, peserta didik mampu menulis gagasan, pikiran, pandangan, pengetahuan, dan pesan tertulis secara runut, logis, dan kritis. Peserta didik mampu menulis berbagai jenis teks panjang termasuk teks ilmiah (Karya Tulis Ilmiah), artikel opini, resensi, dan karya sastra cerpen/novel dengan menggunakan kaidah bahasa Indonesia yang baik dan benar (PUEBI) serta menyajikan kutipan dan daftar pustaka yang valid.',
                 tp: [
                   'Menyusun kerangka Karya Tulis Ilmiah (KTI) dengan struktur pendahuluan, pembahasan, dan penutup.',
-                  'Menulis artikel opini yang faktual dan argumentatif untuk diterbitkan di media cetak atau digital.',
-                  'Menerapkan tata cara penulisan kutipan langsung dan tidak langsung serta daftar pustaka secara tepat.',
-                  'Menulis teks cerpen dengan mengembangkan alur (plot) yang kompleks dan konflik batin tokoh.'
+                  'Menulis artikel opini yang faktual dan argumentatif untuk diterbitkan di media.',
+                  'Menerapkan tata cara penulisan kutipan langsung dan tidak langsung serta daftar pustaka.'
                 ]
               },
               {
                 elemen: 'Berbicara dan Mempresentasikan',
                 cp: 'Pada akhir Fase F, peserta didik mampu menyajikan gagasan dan argumen dalam diskusi, debat, dan presentasi publik dengan percaya diri. Peserta didik dapat merespons dan menanggapi pernyataan/pertanyaan secara kritis dan analitis dalam gelar wicara (talk show) atau seminar mini dengan menggunakan intonasi, diksi, dan bahasa tubuh yang mendukung penyampaian pesan.',
                 tp: [
-                  'Berperan aktif dan menyajikan argumen penolakan (kontra) secara sopan dan rasional dalam debat.',
-                  'Mempresentasikan hasil riset ilmiah/KTI di depan kelas menggunakan media presentasi yang interaktif.',
-                  'Menggunakan diksi akademis dan gaya bahasa retorika yang tepat untuk memengaruhi pendengar saat berpidato.'
+                  'Berperan aktif dan menyajikan argumen penolakan secara sopan dan rasional dalam debat.',
+                  'Mempresentasikan hasil riset ilmiah/KTI di depan kelas menggunakan media interaktif.',
+                  'Menggunakan diksi akademis dan gaya bahasa retorika yang tepat untuk memengaruhi pendengar.'
                 ]
               }
             ],
@@ -461,9 +471,9 @@
                 elemen: 'Membaca - Memirsa',
                 cp: 'Pada akhir Fase F Tingkat Lanjut, peserta didik membaca, menganalisis, dan mengevaluasi teks otentik panjang yang kompleks dari berbagai sumber akademik dan literatur sastra berbahasa Inggris. Mereka memahami nuansa budaya, kiasan, majas, dan nada (tone) penulis dalam teks sastra (novel klasik, puisi tingkat lanjut, atau drama) maupun teks non-fiksi ilmiah jurnal internasional.',
                 tp: [
-                  'Menganalisis perbedaan sudut pandang (point of view) dan nada emosi penulis pada teks literatur sastra.',
+                  'Menganalisis perbedaan sudut pandang (point of view) dan nada emosi penulis pada teks sastra.',
                   'Mengekstraksi informasi kritis dari jurnal atau artikel penelitian akademik berbahasa Inggris.',
-                  'Menelaah penggunaan majas (figures of speech) metafora dan ironi dalam teks puisi atau novel.'
+                  'Menelaah penggunaan majas metafora dan ironi dalam teks puisi atau novel.'
                 ]
               },
               {
@@ -471,8 +481,8 @@
                 cp: 'Pada akhir Fase F Tingkat Lanjut, peserta didik mampu menulis makalah penelitian mini (mini-research paper), esai analitis kritis tingkat tinggi, dan ulasan karya sastra (literature review) dengan tata bahasa tingkat lanjut. Peserta didik mempresentasikan sintesis informasi yang kompleks dan memimpin diskusi panel menggunakan laras bahasa Inggris formal secara mandiri dan fasih.',
                 tp: [
                   'Menulis ulasan buku (book review) mendalam terhadap karya literatur bahasa Inggris.',
-                  'Menyusun esai riset (research essay) dengan menerapkan sitasi standar (APA/MLA style) secara tepat.',
-                  'Memandu jalannya diskusi panel akademik sebagai moderator dengan menggunakan terminologi yang sesuai.'
+                  'Menyusun esai riset (research essay) dengan menerapkan sitasi standar.',
+                  'Memandu jalannya diskusi panel akademik sebagai moderator dengan terminologi yang sesuai.'
                 ]
               }
             ],
@@ -481,7 +491,7 @@
                 elemen: 'Desain dan Perencanaan',
                 cp: 'Pada akhir Fase F, peserta didik mampu merancang proposal bisnis atau perencanaan usaha di bidang kerajinan, rekayasa, budidaya, atau pengolahan. Peserta didik mampu menganalisis studi kelayakan bisnis (Business Plan), merancang strategi branding, mendesain kemasan (packaging), dan menghitung Harga Pokok Produksi (HPP) serta titik impas (Break Even Point/BEP).',
                 tp: [
-                  'Menyusun proposal perencanaan usaha (business plan) produk kriya/pengolahan secara sistematis.',
+                  'Menyusun proposal perencanaan usaha (business plan) secara sistematis.',
                   'Menghitung Harga Pokok Produksi (HPP), biaya operasional, dan Break Even Point (BEP).',
                   'Merancang desain kemasan (packaging) dan identitas merek (branding) untuk meningkatkan daya jual.'
                 ]
@@ -491,8 +501,8 @@
                 cp: 'Pada akhir Fase F, peserta didik memproduksi barang atau jasa dengan skala terbatas yang layak jual di masyarakat. Peserta didik mempraktikkan manajemen produksi massal sederhana dan menerapkan strategi pemasaran (marketing strategy) secara konvensional maupun digital (e-commerce).',
                 tp: [
                   'Memproduksi barang dengan kualitas konsisten (Quality Control) untuk persiapan penjualan.',
-                  'Membuat promosi digital (digital marketing) menggunakan media sosial dan marketplace.',
-                  'Menyusun laporan laba rugi sederhana setelah melakukan praktik penjualan nyata (bazar/online).'
+                  'Membuat promosi digital menggunakan media sosial dan marketplace.',
+                  'Menyusun laporan laba rugi sederhana setelah melakukan praktik penjualan.'
                 ]
               }
             ],
@@ -501,9 +511,9 @@
                 elemen: 'Rekayasa Perangkat Lunak (RPL)',
                 cp: 'Pada akhir Fase F, peserta didik mampu menerapkan prinsip dasar Siklus Hidup Pengembangan Sistem (SDLC) dalam merekayasa perangkat lunak. Peserta didik merancang basis data (database) sederhana, mengembangkan antarmuka pengguna (UI/UX), dan menyusun baris kode program (coding) berorientasi objek untuk membangun aplikasi web, mobile, atau desktop dasar.',
                 tp: [
-                  'Menerapkan tahapan analisis kebutuhan dalam pengembangan aplikasi (Software Development Life Cycle).',
+                  'Menerapkan tahapan analisis kebutuhan dalam pengembangan aplikasi (SDLC).',
                   'Merancang Entity Relationship Diagram (ERD) untuk basis data aplikasi toko online.',
-                  'Membuat halaman web dinamis dasar menggunakan HTML, CSS, dan bahasa pemrograman server-side/client-side.'
+                  'Membuat halaman web dinamis dasar menggunakan HTML, CSS, dan bahasa pemrograman.'
                 ]
               },
               {
@@ -511,8 +521,8 @@
                 cp: 'Pada akhir Fase F, peserta didik memahami konsep topologi jaringan, routing dasar, dan keamanan siber (cyber security) esensial. Peserta didik juga mampu memproses dataset yang lebih besar (big data) menggunakan bahasa pemrograman khusus atau perangkat lunak statistika, dan melakukan visualisasi data untuk pengambilan keputusan (Data Science).',
                 tp: [
                   'Mengkonfigurasi alamat IP (IP Address) dan merancang topologi jaringan lokal (LAN) sederhana.',
-                  'Menganalisis dataset dalam jumlah besar menggunakan pustaka (library) pada bahasa pemrograman Python (misal: Pandas).',
-                  'Membuat dashboard visualisasi data interaktif untuk melaporkan hasil analisis tren (misal: tren penjualan).'
+                  'Menganalisis dataset dalam jumlah besar menggunakan pustaka pada bahasa pemrograman Python.',
+                  'Membuat dashboard visualisasi data interaktif untuk melaporkan hasil analisis.'
                 ]
               }
             ],
@@ -522,8 +532,8 @@
                 cp: 'Pada akhir fase F, peserta didik mampu menganalisis kedudukan Pancasila sebagai ideologi terbuka; serta merumuskan peluang dan tantangan penerapan nilai-nilai Pancasila dalam kehidupan global; peserta didik mampu memprakarsai proyek gotong royong dalam lingkungan masyarakat yang beragam (Bhinneka Tunggal Ika) untuk merespon konflik dan membangun harmoni sosial.',
                 tp: [
                   'Menganalisis makna, sifat, dan kedudukan Pancasila sebagai ideologi terbuka di era modern.',
-                  'Mengidentifikasi ancaman, tantangan, hambatan, dan gangguan (ATHG) terhadap ideologi Pancasila dalam konteks global.',
-                  'Merancang dan melaksanakan proyek sosial berbasis gotong royong untuk menyelesaikan masalah di masyarakat.'
+                  'Mengidentifikasi ancaman, tantangan, hambatan, dan gangguan terhadap ideologi Pancasila.',
+                  'Merancang dan melaksanakan proyek sosial berbasis gotong royong untuk menyelesaikan masalah.'
                 ]
               },
               {
@@ -532,7 +542,7 @@
                 tp: [
                   'Menganalisis peran Indonesia dalam organisasi internasional (seperti PBB, ASEAN, dan G20).',
                   'Mengevaluasi pelaksanaan otonomi daerah dan dampaknya terhadap pembangunan nasional.',
-                  'Merumuskan strategi partisipasi generasi muda dalam menjaga keutuhan wilayah darat, laut, dan udara NKRI.'
+                  'Merumuskan strategi partisipasi generasi muda dalam menjaga keutuhan wilayah NKRI.'
                 ]
               }
             ],
@@ -543,8 +553,8 @@
                 tp: [
                   'Menganalisis potensi dan tantangan posisi strategis Indonesia sebagai poros maritim dunia.',
                   'Mengevaluasi upaya pengelolaan dan pelestarian sumber daya alam yang berkelanjutan.',
-                  'Menganalisis pola persebaran penduduk dan dampaknya terhadap perencanaan tata ruang wilayah.',
-                  'Mengklasifikasikan jenis mitigasi bencana alam yang sesuai dengan kondisi geologis dan geomorfologis daerah.'
+                  'Menganalisis pola persebaran penduduk dan dampaknya terhadap perencanaan tata ruang.',
+                  'Mengklasifikasikan jenis mitigasi bencana alam yang sesuai dengan kondisi geologis.'
                 ]
               },
               {
@@ -552,8 +562,8 @@
                 cp: 'Peserta didik mampu membaca, menginterpretasi, dan menganalisis peta, menggunakan Sistem Informasi Geografis (SIG) dasar untuk memecahkan masalah keruangan, serta merencanakan dan melakukan penelitian geografi sederhana mengenai fenomena geosfer di lingkungan sekitar.',
                 tp: [
                   'Menginterpretasi citra penginderaan jauh untuk mengidentifikasi tata guna lahan.',
-                  'Menggunakan aplikasi SIG (Sistem Informasi Geografis) dasar untuk memetakan sebaran fasilitas umum.',
-                  'Merancang dan melaksanakan penelitian lapangan mengenai dampak aktivitas manusia terhadap kualitas air sungai.'
+                  'Menggunakan aplikasi SIG dasar untuk memetakan sebaran fasilitas umum.',
+                  'Merancang dan melaksanakan penelitian lapangan mengenai dampak aktivitas manusia terhadap kualitas air.'
                 ]
               }
             ],
@@ -564,17 +574,17 @@
                 tp: [
                   'Menganalisis peran BUMN, BUMD, BUMS, dan Koperasi dalam perekonomian Indonesia.',
                   'Menghitung pendapatan nasional menggunakan pendekatan produksi, pendapatan, dan pengeluaran.',
-                  'Mengevaluasi dampak inflasi terhadap daya beli masyarakat dan instrumen kebijakan moneter untuk mengatasinya.',
-                  'Menganalisis komponen APBN dan dampaknya terhadap pertumbuhan ekonomi sektor riil.'
+                  'Mengevaluasi dampak inflasi terhadap daya beli masyarakat dan instrumen kebijakan moneter.',
+                  'Menganalisis komponen APBN dan dampaknya terhadap pertumbuhan ekonomi.'
                 ]
               },
               {
                 elemen: 'Keterampilan Proses',
                 cp: 'Peserta didik mampu menyajikan hasil analisis masalah ekonomi secara kritis, merumuskan solusi alternatif, dan mengomunikasikannya menggunakan media yang relevan, serta mengaplikasikan literasi keuangan dasar pada kehidupan sehari-hari.',
                 tp: [
-                  'Menyajikan laporan hasil observasi tentang tingkat pengangguran terbuka di daerah setempat.',
-                  'Menyusun simulasi rencana keuangan pribadi dengan menerapkan prinsip literasi investasi dan perbankan.',
-                  'Melakukan presentasi kelompok mengenai dampak perdagangan internasional (ekspor-impor) bagi neraca pembayaran.'
+                  'Menyajikan laporan hasil observasi tentang tingkat pengangguran terbuka di daerah.',
+                  'Menyusun simulasi rencana keuangan pribadi dengan menerapkan prinsip literasi investasi.',
+                  'Melakukan presentasi kelompok mengenai dampak perdagangan internasional.'
                 ]
               }
             ],
@@ -583,55 +593,112 @@
                 elemen: 'Berpikir Komputasional dan Algoritma Lanjutan',
                 cp: 'Pada akhir Fase F, peserta didik mampu menerapkan strategi algoritmik yang lebih kompleks (seperti rekursi dan pemrograman dinamis) dan mengimplementasikannya dalam bahasa pemrograman (seperti Python, Java, atau C++) untuk memecahkan permasalahan optimasi, pengolahan data bervolume besar, dan simulasi sains.',
                 tp: [
-                  'Menulis program terstruktur yang melibatkan struktur data tingkat lanjut (seperti tree, graph, atau dictionary).',
-                  'Menerapkan fungsi rekursif (recursion) untuk menyelesaikan masalah matematika (contoh: faktorial, deret Fibonacci).',
-                  'Merancang algoritma optimasi rute terpendek dalam simulasi aplikasi pengiriman barang.'
+                  'Menulis program terstruktur yang melibatkan struktur data tingkat lanjut.',
+                  'Menerapkan fungsi rekursif untuk menyelesaikan masalah matematika.',
+                  'Merancang algoritma optimasi rute terpendek dalam simulasi aplikasi pengiriman.'
                 ]
               },
               {
                 elemen: 'Pengembangan Aplikasi Kecerdasan Buatan (AI)',
-                cp: 'Peserta didik mampu memahami konsep dasar Machine Learning (Supervised dan Unsupervised Learning), mengumpulkan dan membersihkan data (data preprocessing), melatih model AI sederhana menggunakan pustaka/dataset yang tersedia, mengevaluasi akurasi model, dan membangun prototipe aplikasi berbasis AI sambil mempertimbangkan etika penggunaan data.',
+                cp: 'Peserta didik mampu memahami konsep dasar Machine Learning (Supervised dan Unsupervised Learning), mengumpulkan dan membersihkan data (data preprocessing), melatih model AI sederhana menggunakan pustaka/dataset yang tersedia, mengevaluasi akurasi model, dan membangun prototipe aplikasi berbasis AI.',
                 tp: [
                   'Menjelaskan perbedaan cara kerja antara supervised learning dan unsupervised learning.',
-                  'Melakukan pra-pemrosesan data (data preprocessing) sebelum melatih model algoritma.',
-                  'Melatih model klasifikasi (gambar atau teks) menggunakan platform AI berbasis web atau pustaka Python (misal: Scikit-learn).',
-                  'Membuat prototipe aplikasi sederhana (misal: chatbot atau pendeteksi objek) dengan mengintegrasikan API Kecerdasan Buatan.'
+                  'Melakukan pra-pemrosesan data sebelum melatih model algoritma.',
+                  'Melatih model klasifikasi menggunakan platform AI berbasis web atau pustaka Python.'
+                ]
+              }
+            ],
+            'Seni Rupa': [
+              {
+                elemen: 'Mengalami (Experiencing) dan Menciptakan (Making)',
+                cp: 'Pada akhir Fase F, peserta didik mampu mengeksplorasi bahan, medium, teknik, dan prosedur untuk menciptakan karya seni rupa dua dan/atau tiga dimensi yang mencerminkan pemahaman mendalam tentang konsep estetika, pesan moral, dan konteks sosial budaya, baik secara mandiri maupun kolaboratif.',
+                tp: [
+                  'Eksplorasi berbagai media campuran untuk menciptakan karya seni rupa dua dimensi.',
+                  'Merancang dan merealisasikan karya seni rupa tiga dimensi instalasi yang responsif terhadap lingkungan.',
+                  'Menerapkan teknik eksperimental dalam proses penciptaan karya.'
+                ]
+              },
+              {
+                elemen: 'Merefleksikan (Reflecting) dan Berdampak (Impacting)',
+                cp: 'Peserta didik mampu mengevaluasi dan mengapresiasi secara kritis karya seni rupa diri sendiri maupun orang lain dengan menggunakan kosakata seni rupa yang tepat. Peserta didik dapat mengkurasi, menyajikan pameran karya, dan menganalisis dampak karya seni rupa terhadap audiens.',
+                tp: [
+                  'Menyusun narasi kuratorial yang kuat untuk menyertai presentasi karya seni rupa.',
+                  'Merencanakan dan menyelenggarakan pameran seni rupa kelas/sekolah.',
+                  'Melakukan kritik seni terhadap karya seni rupa kontemporer Indonesia.'
                 ]
               }
             ]
           }
         };
 
-        // --- INLINE SVG ICONS ---
-        const GraduationCapIcon = () => (
-            <svg class="text-blue-100" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 18.8V14l6 2.5 6-2.5v4.8a2 2 0 0 1-1.33 1.886l-4.17 1.39a2 2 0 0 1-1.33 0l-4.17-1.39A2 2 0 0 1 6 18.8z"/></svg>
-        );
-        const ChevronDownIcon = () => (
-            <svg class="text-slate-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-        );
-        const SettingsIcon = () => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-        );
-        const FileTextIcon = () => (
-            <svg class="text-slate-600" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-        );
-        const CopyIcon = () => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-        );
-        const CheckCircleIcon = () => (
-            <svg class="text-green-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-        );
-        const DownloadIcon = () => (
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-        );
-        const BookOpenIcon = () => (
-            <svg class="text-blue-600" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        );
-        const ArrowDownIcon = () => (
-            <svg class="text-blue-400 print:text-black" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        // Inline SVG Components to replace lucide-react dependency
+        const GraduationCap = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+            <path d="M6 18.8v-4M18 18.8v-4"/>
+            <path d="M6 14v2a6 6 0 0 0 12 0v-2"/>
+          </svg>
         );
 
-        // --- MAIN APP COMPONENT ---
+        const ChevronDown = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        );
+
+        const Settings = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        );
+
+        const FileText = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+            <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+            <path d="M10 9H8"/>
+            <path d="M16 13H8"/>
+            <path d="M16 17H8"/>
+          </svg>
+        );
+
+        const Copy = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+          </svg>
+        );
+
+        const CheckCircle2 = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        );
+
+        const Download = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" x2="12" y1="15" y2="3"/>
+          </svg>
+        );
+
+        const BookOpen = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        );
+
+        const ArrowDown = ({ size = 24, className = "" }) => (
+          <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <line x1="12" x2="12" y1="5" y2="19"/>
+            <polyline points="19 12 12 19 5 12"/>
+          </svg>
+        );
+
         function App() {
           const [selectedFase, setSelectedFase] = useState('Fase E (Kelas X)');
           const [selectedMapel, setSelectedMapel] = useState('Matematika');
@@ -654,14 +721,19 @@
             
             setTimeout(() => {
               const data = kurikulumData[selectedFase][selectedMapel];
+              if (!data) return;
+
               let globalAtpCounter = 1;
               const processedData = data.map((item) => {
                 const atpList = item.tp.map(tpText => ({
-                  kode: `10.${globalAtpCounter++}`,
+                  kode: selectedFase.includes('Fase E') ? `10.${globalAtpCounter++}` : `11.${globalAtpCounter++}`,
                   teks: tpText
                 }));
                 
-                return { ...item, atp: atpList };
+                return {
+                  ...item,
+                  atp: atpList
+                };
               });
 
               setResult({
@@ -671,7 +743,7 @@
                 tahun: '2025/2026'
               });
               setIsGenerating(false);
-            }, 800);
+            }, 600);
           };
 
           const handleDownload = () => {
@@ -684,7 +756,7 @@
               <div style="text-align: center; font-family: 'Times New Roman', serif;">
                 <h2>CAPAIAN DAN ALUR TUJUAN PEMBELAJARAN</h2>
                 <h3>Tingkat Sekolah Menengah Atas (SMA)</h3>
-                <p>Mata Pelajaran: <strong>${result.mapel}</strong> | Fase: <strong>${result.fase}</strong></p>
+                <p>Mata Pelajaran: <strong>\${result.mapel}</strong> | Fase: <strong>\${result.fase}</strong></p>
               </div>
               <hr style="margin-bottom: 20px;"/>
             `;
@@ -692,9 +764,11 @@
             result.data.forEach(item => {
               docContent += `
                 <div style="font-family: 'Times New Roman', serif; margin-bottom: 30px;">
-                  <h4 style="background-color: #f1f5f9; padding: 10px; border: 1px solid #cbd5e1; margin-bottom: 10px;">Elemen: ${item.elemen}</h4>
+                  <h4 style="background-color: #f1f5f9; padding: 10px; border: 1px solid #cbd5e1; margin-bottom: 10px;">Elemen: \${item.elemen}</h4>
+                  
                   <h5 style="margin-top: 15px; margin-bottom: 5px;">Capaian Pembelajaran (CP)</h5>
-                  <p style="text-align: justify; margin-top: 0;">${item.cp}</p>
+                  <p style="text-align: justify; margin-top: 0;">\${item.cp}</p>
+                  
                   <h5 style="margin-top: 20px; margin-bottom: 10px;">Alur Tujuan Pembelajaran (ATP)</h5>
                   <div>
               `;
@@ -702,7 +776,7 @@
               item.atp.forEach((atpItem, idx) => {
                 docContent += `
                   <div style="border: 1px solid #bfdbfe; background-color: #eff6ff; padding: 10px; margin-bottom: 5px; border-radius: 4px;">
-                    <strong>${atpItem.kode}</strong> - ${atpItem.teks}
+                    <strong>\${atpItem.kode}</strong> - \${atpItem.teks}
                   </div>
                 `;
                 if (idx < item.atp.length - 1) {
@@ -714,9 +788,12 @@
             });
 
             const html = header + docContent + footer;
-            const blob = new Blob(['\ufeff', html], { type: 'application/msword' });
+            const blob = new Blob(['\ufeff', html], {
+                type: 'application/msword'
+            });
+            
             const url = URL.createObjectURL(blob);
-            const filename = `CP_ATP_${result.mapel.replace(/\s+/g, '_')}_${result.fase.replace(/\s+/g, '_')}.doc`;
+            const filename = `CP_ATP_\${result.mapel.replace(/\\s+/g, '_')}_\${result.fase.replace(/\\s+/g, '_')}.doc`;
             
             const downloadLink = document.createElement("a");
             downloadLink.href = url;
@@ -728,8 +805,8 @@
           };
 
           const handleCopy = () => {
-            const textToCopy = `Dokumen CP, TP, dan ATP\nFase: ${result.fase}\nMata Pelajaran: ${result.mapel}\n\n` + 
-              result.data.map(d => `Elemen: ${d.elemen}\nCP: ${d.cp}\nTP: ${d.tp.join('; ')}`).join('\n\n');
+            const textToCopy = `Dokumen CP, TP, dan ATP\nFase: \${result.fase}\nMata Pelajaran: \${result.mapel}\n\n` + 
+              result.data.map(d => `Elemen: \${d.elemen}\nCP: \${d.cp}\n\nTP/ATP:\n` + d.atp.map(a => `\${a.kode}. \${a.teks}`).join('\n')).join('\n\n');
             
             navigator.clipboard.writeText(textToCopy);
             setCopied(true);
@@ -737,28 +814,32 @@
           };
 
           return (
-            <div>
-              <header className="bg-blue-900 text-white shadow-md print:hidden">
+            <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
+              
+              {/* Header Panel */}
+              <header className="bg-blue-900 text-white shadow-md">
                 <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
                   <div className="flex items-center gap-3">
                     <div className="bg-white/10 p-2 rounded-lg">
-                      <GraduationCapIcon />
+                      <GraduationCap size={28} className="text-blue-100" />
                     </div>
                     <div>
-                      <h1 className="font-bold text-xl leading-tight">Generator Kurikulum Merdeka</h1>
-                      <p className="text-xs text-blue-200">Menyusun CP, TP, & ATP jenjang SMA/MA</p>
+                      <h1 className="font-bold text-xl leading-tight">Generator Kurikulum Merdeka SMA</h1>
+                      <p className="text-xs text-blue-200">Penyusun CP, TP, & ATP Terpadu (Fase E & F)</p>
                     </div>
                   </div>
                   <div className="text-sm bg-blue-800 px-3 py-1 rounded-full border border-blue-700 text-blue-100">
-                    Sesuai Regulasi Terbaru
+                    Sesuai Permendikbudristek No. 13 Terbaru
                   </div>
                 </div>
               </header>
 
+              {/* Control Panel */}
               <main className="max-w-6xl mx-auto px-4 py-8">
-                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8 print:hidden">
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
                     
+                    {/* Phase Selector */}
                     <div className="space-y-2">
                       <label className="block text-sm font-semibold text-slate-700">Fase (Kelas)</label>
                       <div className="relative">
@@ -771,10 +852,11 @@
                             <option key={fase} value={fase}>{fase}</option>
                           ))}
                         </select>
-                        <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"><ChevronDownIcon /></span>
+                        <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" size={18} />
                       </div>
                     </div>
 
+                    {/* Subject Selector */}
                     <div className="space-y-2">
                       <label className="block text-sm font-semibold text-slate-700">Mata Pelajaran SMA</label>
                       <div className="relative">
@@ -787,10 +869,11 @@
                             <option key={mapel} value={mapel}>{mapel}</option>
                           ))}
                         </select>
-                        <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"><ChevronDownIcon /></span>
+                        <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" size={18} />
                       </div>
                     </div>
 
+                    {/* Action Trigger Button */}
                     <div>
                       <button 
                         onClick={handleGenerate}
@@ -803,8 +886,8 @@
                             Memproses...
                           </span>
                         ) : (
-                          <span className="flex items-center gap-2 m-auto">
-                            <SettingsIcon /> Generate Dokumen
+                          <span className="flex items-center gap-2">
+                            <Settings size={18} /> Susun Alur & Capaian
                           </span>
                         )}
                       </button>
@@ -812,67 +895,79 @@
                   </div>
                 </div>
 
+                {/* Generated Documents Area */}
                 {result && (
                   <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
-                    <div className="bg-slate-100 border-b border-slate-200 p-4 flex justify-between items-center print:hidden">
+                    
+                    {/* Tooling Header */}
+                    <div className="bg-slate-100 border-b border-slate-200 p-4 flex justify-between items-center">
                       <div className="flex items-center gap-2 text-slate-600 font-medium">
-                        <FileTextIcon />
-                        <span>Pratinjau Dokumen</span>
+                        <FileText size={18} />
+                        <span>Pratinjau Hasil Perangkat Ajar</span>
                       </div>
                       <div className="flex gap-2">
                         <button onClick={handleCopy} className="flex items-center gap-2 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium transition-colors">
-                          {copied ? <CheckCircleIcon /> : <CopyIcon />}
+                          {copied ? <CheckCircle2 size={16} className="text-green-500"/> : <Copy size={16} />}
                           {copied ? 'Tersalin!' : 'Salin Teks'}
                         </button>
                         <button onClick={handleDownload} className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-md text-sm font-medium transition-colors shadow-sm">
-                          <DownloadIcon />
+                          <Download size={16} />
                           Unduh Dokumen (.doc)
                         </button>
                       </div>
                     </div>
 
-                    <div className="p-8 sm:p-12 print:p-0 print:text-black">
+                    {/* Rendered Sheet Mock */}
+                    <div className="p-8 sm:p-12">
                       <div className="text-center mb-8 border-b-2 border-black pb-6">
-                        <h2 className="text-2xl font-bold uppercase tracking-wide mb-1">Capaian dan Alur Tujuan Pembelajaran</h2>
-                        <h3 className="text-xl font-semibold">Tingkat Sekolah Menengah Atas (SMA)</h3>
-                        <div className="mt-4 flex justify-center gap-6 text-sm font-medium">
-                          <span className="bg-slate-100 print:bg-transparent px-3 py-1 rounded">Mata Pelajaran: <strong>{result.mapel}</strong></span>
-                          <span className="bg-slate-100 print:bg-transparent px-3 py-1 rounded">Fase: <strong>{result.fase}</strong></span>
+                        <h2 className="text-2xl font-bold uppercase tracking-wide mb-1 text-slate-900">
+                          Capaian dan Alur Tujuan Pembelajaran
+                        </h2>
+                        <h3 className="text-xl font-semibold text-slate-700">Tingkat Sekolah Menengah Atas (SMA)</h3>
+                        <div className="mt-4 flex justify-center gap-4 text-sm font-medium flex-wrap">
+                          <span className="bg-slate-100 px-3 py-1 rounded">Mata Pelajaran: <strong>{result.mapel}</strong></span>
+                          <span className="bg-slate-100 px-3 py-1 rounded">Fase: <strong>{result.fase}</strong></span>
+                          <span className="bg-slate-100 px-3 py-1 rounded">Tahun Pelajaran: <strong>{result.tahun}</strong></span>
                         </div>
                       </div>
 
+                      {/* Elemen Listing and Diagrams */}
                       <div className="space-y-8">
                         {result.data.map((item, index) => (
-                          <div key={index} className="break-inside-avoid border border-slate-300 print:border-black rounded-lg overflow-hidden">
-                            <div className="bg-slate-100 print:bg-gray-200 border-b border-slate-300 print:border-black p-3">
-                              <h4 className="font-bold flex items-center gap-2">
-                                <span className="print:hidden"><BookOpenIcon /></span>
+                          <div key={index} className="border border-slate-300 rounded-lg overflow-hidden">
+                            <div className="bg-slate-100 border-b border-slate-300 p-3">
+                              <h4 className="font-bold text-slate-900 flex items-center gap-2">
+                                <BookOpen size={18} className="text-blue-600" />
                                 Elemen: {item.elemen}
                               </h4>
                             </div>
                             
-                            <div className="p-4 space-y-4">
+                            <div className="p-4 space-y-6">
+                              {/* CP Box */}
                               <div>
-                                <h5 className="font-semibold text-slate-700 print:text-black mb-1 underline decoration-2 underline-offset-4">Capaian Pembelajaran (CP)</h5>
-                                <p className="text-justify leading-relaxed">{item.cp}</p>
+                                <h5 className="font-semibold text-slate-800 mb-1.5 underline decoration-2 underline-offset-4 decoration-blue-500">Capaian Pembelajaran (CP)</h5>
+                                <p className="text-justify leading-relaxed text-slate-700">{item.cp}</p>
                               </div>
 
-                              <div className="mt-4 pt-4 border-t border-slate-200 print:border-black border-dashed">
-                                <h5 className="font-semibold text-slate-700 print:text-black mb-4">Bagan Alur Tujuan Pembelajaran (ATP)</h5>
-                                <div className="flex flex-col gap-1">
+                              {/* Logical ATP Flow Diagrams */}
+                              <div className="pt-4 border-t border-slate-200 border-dashed">
+                                <h5 className="font-semibold text-slate-800 mb-4">Urutan Logis Alur Tujuan Pembelajaran (ATP)</h5>
+                                
+                                <div className="flex flex-col gap-1.5">
                                   {item.atp.map((atpItem, atpIdx) => (
                                     <React.Fragment key={atpIdx}>
-                                      <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg shadow-sm print:shadow-none print:border-black print:bg-transparent flex items-start gap-4">
-                                        <span className="bg-blue-600 text-white font-bold px-3 py-1.5 rounded-md text-sm print:bg-gray-200 print:text-black print:border print:border-black shrink-0">
+                                      <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg shadow-sm flex items-start gap-4">
+                                        <span className="bg-blue-600 text-white font-bold px-3 py-1.5 rounded-md text-sm shrink-0">
                                           {atpItem.kode}
                                         </span>
-                                        <p className="text-slate-700 print:text-black leading-relaxed mt-0.5">
+                                        <p className="text-slate-700 leading-relaxed mt-0.5">
                                           {atpItem.teks}
                                         </p>
                                       </div>
+                                      
                                       {atpIdx < item.atp.length - 1 && (
-                                        <div className="flex justify-center my-1 print:my-2">
-                                          <ArrowDownIcon />
+                                        <div className="flex justify-center my-1">
+                                          <ArrowDown size={24} className="text-blue-500" />
                                         </div>
                                       )}
                                     </React.Fragment>
@@ -883,15 +978,6 @@
                           </div>
                         ))}
                       </div>
-
-                      <div className="mt-16 justify-end print:flex hidden">
-                        <div className="text-center w-64">
-                          <p>Mengetahui,</p>
-                          <p className="mb-20">Kepala Sekolah / Guru Mata Pelajaran</p>
-                          <p className="font-bold underline">___________________________</p>
-                          <p>NIP. </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 )}
@@ -900,8 +986,7 @@
           );
         }
 
-        const container = document.getElementById('root');
-        const root = ReactDOM.createRoot(container);
+        const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
 </body>
